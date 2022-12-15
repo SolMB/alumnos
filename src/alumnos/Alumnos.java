@@ -96,7 +96,7 @@ public class Alumnos
       throws java.sql.SQLException
   {
     sentenciaSQL.executeUpdate("INSERT INTO " + "alumnos" +
-      " VALUES (" + expediente + ", " + nombre + ", " + localidad + ", " + fecha_nac + ", " + direccion + ", " + curso + ", " + nivel + ", " +  faltas + ")"
+      " VALUES (" + expediente + ", '" + nombre + "', '" + localidad + "', '" + fecha_nac + "', '" + direccion + "', " + curso + ", '" + nivel + "', " +  faltas + ")"
     );
   }
 
@@ -108,7 +108,7 @@ public class Alumnos
       throws java.sql.SQLException
   {
     sentenciaSQL.executeUpdate("DELETE FROM " + "alumnos" +
-       " WHERE id_alumno = " + ID);
+       " WHERE expediente = " + ID);
   }
 
   public void mostrarTabla(String tabla)
